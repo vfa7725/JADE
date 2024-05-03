@@ -1,0 +1,141 @@
+Full Credit
+===========
+
+Number of cores available to my test environment (in bash use ``nproc`` command):3
+Primes range for my machine (between 20 and 30 second runtime without threads): 0 - 666666
+
+Without threads:
+
+real	0m29.419s
+user	0m29.536s
+sys	0m0.044s
+
+
+With 2 threads:
+
+real	0m34.499s
+user	1m8.493s
+sys	0m0.149s
+
+
+With 3 threads:
+
+real	0m36.902s
+user	1m43.738s
+sys	0m1.224s
+
+
+With 4 threads:
+
+real	0m45.223s
+user	2m12.497s
+sys	0m0.371s
+
+
+
+With 5 threads:
+
+real	0m59.909s
+user	2m53.036s
+sys	0m1.008s
+
+
+
+With 6 threads:
+
+real	1m8.054s
+user	3m19.759s
+sys	0m0.687s
+
+
+
+With 7 threads:
+
+real	1m23.254s
+user	3m58.612s
+sys	0m1.743s
+
+
+
+With 8 threads:
+
+real	1m40.416s
+user	4m52.606s
+sys	0m1.161s
+	
+
+
+With 16 threads:
+
+real	3m16.307s
+user	9m38.938s
+sys	0m1.404s
+	
+
+
+With 32 threads:
+
+real	6m2.666s
+user	17m52.296s
+sys	0m2.070s
+
+
+
+With 64 threads:
+
+real	12m5.791s
+user	35m42.311s
+sys	0m4.595s
+
+
+
+QUESTION: After threading is added to threads.cpp, is the order of prime numbers found in primes_threads.txt the same or different than in primes.txt?  Why?
+it is the same, because its all the same time
+
+
+
+QUESTION: Does adding more threads continue to speed up the program? Do more threads ever slow down the program slightly?  Why or why not?
+slow down, more processes being run, more switching
+
+
+
+QUESTION: Does adding more threads increase the "system load", or is it constant regardless of the number of threads?  Why?
+increases the system load, more computation
+
+
+Bonus
+=====
+
+After "load balancing" your code as discussed in the PDF, rerun the test with the same number of threads as your test environment has cores. For example, on a 4-core machine, run your code with 4 threads and record the time below.
+
+Number of cores: 
+
+Load Balanced
+-------------
+
+real	
+user	
+sys	
+
+NOT Load Balanced
+-----------------
+
+Copy the time for this number of cores from the Full Credit section:
+
+real	
+user	
+sys	
+
+QUESTION: What difference does a load balanced thread pool make in execution time?
+
+
+
+
+Extreme Bonus
+=============
+
+List the optimizations you applied to reduce the time needed to identify prime numbers.
+
+* Optimization 1: 
+* Optimization 2: 
+* Optimization 3: 
